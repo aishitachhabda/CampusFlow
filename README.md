@@ -232,35 +232,3 @@ server/src/services/predictionService.js
 
 to call that service.
 
-## Important security note
-
-Google authentication proves the user's Google identity. The backend verifies the Google ID token using Google's public verification infrastructure before creating/updating the local user record.
-
-Do NOT:
-- store Google passwords
-- store access tokens unnecessarily
-- expose MYSQL credentials in React
-- put JWT secrets in the frontend
-- trust an email sent by the browser without verifying the Google token
-
-## Suggested presentation to teacher
-
-Show this flow:
-
-1. Student opens CampusFlow.
-2. Logs in with college Gmail.
-3. Dashboard shows current campus resource status.
-4. Selects Canteen/Amul/Snackify/Nescafe.
-5. Uploads a current image.
-6. CNN classifies Free / Moderate / Busy.
-7. Student enters 2:30 PM.
-8. LSTM/GRU gives expected crowd.
-9. Dashboard says:
-   - "Good time to visit"
-   - "Moderate waiting expected"
-   - "Try another time"
-10. Open developer/admin dashboard.
-11. Show that registered users and access/login events are being recorded in MySQL.
-
-This demonstrates the complete chain:
-Deep Learning → Backend API → DBMS → Authentication → User Interface → Decision Support.
