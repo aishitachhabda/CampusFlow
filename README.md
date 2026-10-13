@@ -199,8 +199,5 @@ After logging in with that Google account, visit:
 
 The admin dashboard shows:
 - total registered users
-- recent logins
-- login count
-- last login
 - prediction activity
 
